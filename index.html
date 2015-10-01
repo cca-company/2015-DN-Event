@@ -3,13 +3,14 @@
 	<head>
 		<title>드래곤네스트 쁘띠 온리전~소비왕의 귀환~</title>
 		<link rel="stylesheet" media="screen" href="asset/style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	</head>
 	<body>
-		<div id="navigation">
+		<div id="navigation" class="hide">
 			<div class="container">
-				<h1><img src="asset/logo_navigator.png" alt="드래곤네스트 소비왕의 귀환" /></h1>
+				<h1><img src="asset/logo_navigator.png" alt="드래곤네스트 소비왕의 귀환" onclick="page.movePage(0)" /></h1>
 				<ul>
-					<li class="btn-menu1 rollup"><img src="asset/nav_menu1.png" alt="행사소개"/></li>
+					<li class="btn-menu1"><img src="asset/nav_menu1.png" alt="행사소개"/></li>
 					<li class="btn-menu2"><img src="asset/nav_menu2.png" alt="이벤트"/></li>
 					<li class="btn-menu3"><img src="asset/nav_menu3.png" alt="참여서클"/></li>
 					<li class="btn-menu4"><img src="asset/nav_menu4.png" alt="Q&amp;A"/></li>
@@ -20,7 +21,7 @@
 		<div id="main">
 			<div id="page-main">
 				<div class="container">
-					<h2><img src="asset/logo.png" alt="드래곤네스트 소비왕의 귀" /></h2>
+					<h2><img src="asset/logo.png" alt="드래곤네스트 소비왕의 귀환" /></h2>
 					<p><img src="asset/mainpage_text1.png" alt="온라인 게임 통합 온리전 LOGIN :: 드래곤네스트 쁘띠 온리 - 2015/11/28 KBS 스포츠월드 제 2 체육관" /></p>
 					<ul id="menu-list">
 						<li class="btn-menu1"><img src="asset/button_menu1.png" alt="행사소개"/></li>
@@ -33,21 +34,135 @@
 			</div>
 			<div id="page-intro">
 				<div class="container">
+					<div class="timetable">
+						<h4><img src="asset/page1_list1.png" alt="" /></h4>
+						<img src="asset/page1_list1_content.png" alt="" />
+					</div>
+					<div class="route">
+						<h4><img src="asset/page1_list2.png" alt="" /></h4>
+						<img src="asset/page1_list2_content.png" alt="" />
+					</div>
+					<div class="twitter">
+						<h4><img src="asset/page1_list3.png" alt="" /></h4>
+						<div class="widget-box">
+						<a class="twitter-timeline" href="https://twitter.com/DNPetitOnly" data-widget-id="649318268960829440">@DNPetitOnly 님의 트윗</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						</div>
+					</div>
+					<div class="guest">
+						<h4><img src="asset/page1_list4.png" alt="" /></h4>
+						<p class="hide">
+							<span class="num">200</span>
+							<br />분께서 참관객 조사에 참여해주셨습니다
+						</p>
+						<fieldset>
+							<input type="text" name="email" value="이메일 or 트위터 아이디" id="guest-email" />
+							<input type="text" name="num" value="참가인원" id="guest-num" />
+							<textarea>기타 하고싶으신 말씀을 자유롭게 입력해주세요</textarea>
+							<button>참여하기</button>
+						</fieldset>
+					</div>
 				</div>
 			</div>
 			<div id="page-event">
 				<div class="container">
+					<ul id="event-list">
+						<li class="loading" data-event="event1">
+							<img src="asset/event1_loading.png" />
+						</li>
+						<li class="loading" data-event="event2">
+							<img src="asset/event2_loading.png" />
+						</li>
+						<li class="loading" data-event="event3">
+							<img src="asset/event3_loading.png" />
+						</li>
+					</ul>
 				</div>
 			</div>
 			<div id="page-circle">
-				<h3></h3>
+				<h3><img src="asset/circlepage_title.png" /></h3>
+				<ul id="circle-list">
+					<li>
+						<img src="asset/bbbbb.png" />
+						<h4>이레인러브</h4>
+					</li>
+				</ul>
 			</div>
 			<div id="page-qna">
-				<h3></h3>
+				<h3><img src="asset/qnapage_title.png" /></h3>
+				<button>질문하기</button>
+				<ul class="qna-list">
+					<li>
+						<h5>질문입니다</h5>
+						<span class="quest-day">이름 · 11시간 전 ·</span> <span class="remove">삭제</span>
+						<p class="question">
+							질문내용입니다 질문내용은 최대 200자까지 입력 가능합니다
+						</p>
+						<p class="answer">
+							답변입니다 답변은 최대 200자까지 입력 가능합니다
+						</p>
+					</li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="qna-page-list">
+					<li class="prev-page">&lt;</li>
+					<li class="next-page">&gt;</li>
+				</ul>
 			</div>
 			<div id="page-contact">
-				<h3></h3>
+				<div class="container">
+					<h3><img src="asset/contactpage_title.png" /></h3>
+					<dl>
+						<dt>소비왕의 귀환</dt>
+						<dd>
+							<a href="#none;" target="_blank"><img src="http://placekitten.com/g/200/40" alt="소비왕의 귀환" /></a>
+						</dd>
+						<dt>현실 로그아웃 길드</dt>
+						<dd>
+							<a href="http://ongameonly.cafe24.com/xe/" target="_blank"><img src="data/banner_login.gif" alt="현실 로그아웃 길드" /></a>
+						</dd>
+						<dt>주최</dt>
+						<dd>
+							<a href="#none;" target="_blank"><img src="http://placekitten.com/g/200/40" alt="주최" /></a> ***님
+						</dd>
+						<dd>
+							<a href="#none;" target="_blank"><img src="http://placekitten.com/g/200/40" alt="주최" /></a> ***님
+						</dd>
+					</dl>
+					<dl>
+						<dt>협찬</dt>
+						<dd>
+							<a href="#none;" target="_blank"><img src="http://placekitten.com/g/200/40" alt="주최" /></a> ***님
+						</dd>
+					</dl>
+					<dl></dl>
+				</div>
 			</div>
 		</div>
+		<div id="popup-bg">
+			<div id="popup-box-question">
+				<input type="text" name="subject" value="제목" id="question-subject" />
+				<input type="text" name="name" value="이름" id="question-name" />
+				<input type="password" name="pw" value="비밀번호" id="question-pw" />
+				<textarea maxlength="200">질문 내용은 200자까지 입력 가능합니다</textarea>
+				<button>질문하기</button>
+			</div>
+			<div id="popup-box-circle">
+				<div class="img" style="background-image:url(asset/bbbbb.png)"></div>
+				<div class="content">
+					<h4>부스명</h4>
+					<span>부스러명</span>
+					<p>
+						이런 저런 회지가 나옵니다 이레인 사랑해
+					</p>
+				</div>
+			</div>
+			<img class="exit" src="asset/exit.png" onclick="$('#popup-bg,#popup-bg>div').css({display:'none'})" />
+		</div>
 	</body>
+	<script type="text/javascript" src="asset/script.js"></script>
 </html>
