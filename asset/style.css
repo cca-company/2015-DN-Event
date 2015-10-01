@@ -90,10 +90,15 @@ ul,li,p,h1,h2,h3,h4,h5,h6,form,dl,dt,dd{
 		#page-main p{
 			margin-top:15px;
 		}
+		#page-main span{
+			font-size:12px;
+			color:#999;
+		}
 		#page-main #menu-list{
 			position:relative;
 			width:174px;
 			margin:30px auto 0 auto;
+			height:400px;
 		}
 			#page-main #menu-list li{
 				cursor:pointer;
@@ -325,6 +330,7 @@ ul,li,p,h1,h2,h3,h4,h5,h6,form,dl,dt,dd{
 			.qna-list li .remove{
 				color:#aaa;
 				font-size:12px;
+				cursor:pointer;
 			}
 			.qna-list li p.question{
 				padding:5px;

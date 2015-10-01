@@ -50,7 +50,7 @@ var page = {
 
 	},
 	movePage : function(pageNum){
-		$("body").animate(
+		$("body,html").animate(
 			{scrollTop : page.pageTop[pageNum]}
 		);
 	},
